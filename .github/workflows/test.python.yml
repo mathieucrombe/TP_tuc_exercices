@@ -24,4 +24,4 @@ jobs:
           python -m pytest
       - name: Lauch pylint
         run: |
-          python -m pylint application/
+          python -m pylint application/tests/
