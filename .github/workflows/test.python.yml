@@ -1,0 +1,15 @@
+name: Python CI
+
+on:                 #Evenement déclancheur
+  workflow_dispatch: #Déclanchement manuel
+  push: ['main','master','develop']
+
+  jobs:
+    tests:
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v3
+        - name: Print folder
+          run: |
+            ls
