@@ -2,7 +2,9 @@ name: Python CI
 
 on:                 #Evenement déclancheur
   workflow_dispatch: #Déclanchement manuel
-  push: ['main','master','develop']
+  push:
+    branches:
+      - main
 
   jobs:
     tests:
