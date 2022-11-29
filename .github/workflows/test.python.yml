@@ -1,16 +1,17 @@
 name: Python CI
 
-on:                 #Evenement déclancheur
-  workflow_dispatch: #Déclanchement manuel
+on:
+  workflow_dispatch:
   push:
     branches:
       - main
 
-  jobs:
-    tests:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: Print folder
-          run: |
-            ls
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Print folder
+        run: |
+          ls
